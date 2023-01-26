@@ -20,24 +20,49 @@ To write a program to perform selection sort and insertion sort using python pro
 ## Program:
 i)	#Selection Sort
 ```
-
-
-
-
-
+''' 
+Program to sort the elements in the list using the Selection Sort algorithm.
+Developed by: jagadeeshreddy
+RegisterNumber: 22001910
+'''
+def selection_sort(list_of_nums):
+    n = len(list_of_nums)
+    for i in range(n):
+        min_idx = i
+        for j in range(i+1, n):
+            if list_of_nums[min_idx] > list_of_nums[j]:
+                min_idx = j
+        list_of_nums[i], list_of_nums[min_idx] = list_of_nums[min_idx], list_of_nums[i]
+    return list_of_nums
+list_of_nums = eval(input())
+print(selection_sort(list_of_nums))
 ```
 ii)	#Insertion Sort
 ```
-
-
-
-
-
-
+''' 
+Program to sort the elements in the list using the Insertion Sort algorithm.
+Developed by: jagadeeshreddy
+RegisterNumber: 22001910
+'''
+def insertion_sort(nums):
+    for i in range(1, len(list)):
+        currentvalue = list[i]
+        position = i 
+        
+        while position > 0 and list[position - 1] > currentvalue:
+            list[position] = list[position - 1]
+            position = position - 1
+            
+        list[position] = currentvalue 
+        
+list = eval(input())
+insertion_sort(list)
+print(list)
 ```
 
 ## Output:
-
+![Screenshot (23)](https://user-images.githubusercontent.com/120623104/214884768-7e56270d-66a0-4788-aa97-113a3deade0f.png)
+![Screenshot (24)](https://user-images.githubusercontent.com/120623104/214884954-f3a2d274-5af4-416e-aee7-ad1a9ba9e462.png)
 
 ## Result:
 Thus the program is written to perform selection sort and insertion sort using python programming.
